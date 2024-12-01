@@ -1,0 +1,15 @@
+﻿@{
+	ViewData["Title"] = "Import";
+}
+
+<h2>Import</h2>
+
+<form asp-action="ImportData" method="post" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="file">Vyberte Excel soubor pro import: </label>
+		<input type="file" name="file" class="form-control" required />
+	</div>	
+	<button type="submit" class="btn btn-primary">Importovat</button>
+
+
+</form>

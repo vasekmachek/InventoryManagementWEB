@@ -1,0 +1,32 @@
+﻿@model InventoryManagementWEB.Models.InventoryItem
+
+<h2>Vytvořit Položku</h2>
+
+<form asp-action="Create">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5>Detail položky</h5>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Zadejte název položky:</label>
+                <input asp-for="Name" class="form-control" placeholder="Například: Jablko" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Quantity" class="form-label">Zadejte množství:</label>
+                <input asp-for="Quantity" class="form-control" placeholder="Například: 10" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label">Zadejte cenu:</label>
+                <input asp-for="Price" class="form-control" placeholder="Například: 29.99" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Přidat položku" class="btn btn-success btn-lg" />
+                <a asp-action="Index" class="btn btn-secondary btn-lg ms-2">Zpět na seznam</a>
+            </div>
+        </div>
+    </div>
+</form>
